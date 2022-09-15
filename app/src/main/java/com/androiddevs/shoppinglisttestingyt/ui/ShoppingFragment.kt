@@ -26,7 +26,7 @@ class ShoppingFragment @Inject constructor(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = viewModel ?: ViewModelProvider(requireActivity()).get(ShoppingViewModel::class.java)
+        viewModel = viewModel ?: ViewModelProvider(requireActivity())[ShoppingViewModel::class.java]
         subscribeToObservers()
         setupRecyclerView()
 
